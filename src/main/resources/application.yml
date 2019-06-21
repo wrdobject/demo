@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/world?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  freemarker:
+    suffix: .html
+    cache: false
+    template-loader-path: classpath:/templates
+  #时间返回格式
+jackson:
+  time-zone: GMT+8
+  date-format: yyyy-MM-dd
+mybatis:
+  mapper-locations: classpath:mapper/**.xml
+  type-aliases-package: com.example.demo.pojo
+#  mapper:
+#    mappers: com.gysoftown.framework.base.dao.BaseMapper
+#    not-empty: false
+#    identity: MYSQL
